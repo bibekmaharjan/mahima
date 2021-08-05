@@ -1,0 +1,32 @@
+{
+  "name": "mahima",
+  "version": "1.0.0",
+  "description": "Landing page for mahima",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "node-sass ./style/sass/main.scss ./style/css/style.css -w",
+    "compile:sass": "node-sass ./sass/main.scss ./style/css/style.comp.css",
+    "concat:css": "concat -o style/css/style.concat.css style/css/icon-font.css style/css/style.comp.css",
+    "prefix:css": "postcss --use autoprefixer -b \"last 10 versions\" style/css/style.concat.css -o style/css/style.prefix.css",
+    "compress:css": "node-sass style/css/style.prefix.css style/css/style.css --output-style compressed",
+    "build:css": "npm-run-all compile:sass concat:css prefix:css compress:css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bibekmaharjan/mahima.git"
+  },
+  "author": "Bibek Maharjan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bibekmaharjan/mahima/issues"
+  },
+  "homepage": "https://github.com/bibekmaharjan/mahima#readme",
+  "devDependencies": {
+    "autoprefixer": "^9.8.0",
+    "concat": "^1.0.3",
+    "node-sass": "^4.14.1",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^7.1.1"
+  },
+  "dependencies": {}
+}

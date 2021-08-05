@@ -1,0 +1,63 @@
+header {
+    position: relative;
+    height: 100vh;
+    background-image: url(../../../assets/img/header__img.jpg);
+    background-size: cover;
+    
+    @include respond(phone) {
+        background-image: url(../../../assets/img/header_img-mobile.png);
+        background-position-y: bottom;
+    }
+
+}
+
+.cta{
+    &__container{
+        position: absolute;
+        right: 18rem;
+        bottom: 14%;
+
+        @include respond(phone) {
+            width: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+    &__text {
+        margin-bottom: 5rem;
+    }
+    &__text span{
+        display: block;
+    }
+}
+
+
+//Responsive Btn
+.btn__cta {
+
+    @include respond(phone) {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 1.5rem 5rem !important;
+        font-size: 1.6rem !important;
+    }
+}
+
+//responsive btn txt swap
+.btnTxt {
+    &__default {
+        @include respond(phone) {
+            display: none;
+        }
+    }
+
+    &__responsive {
+        display: none;
+
+        @include respond(phone) {
+            display: inline-block;
+        }
+    }
+}

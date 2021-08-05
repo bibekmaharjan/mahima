@@ -1,0 +1,358 @@
+//Product Slider Section
+.section-productSlider {
+    position: relative;
+
+    @include respond(phone) {
+        display: none;
+
+    }
+}
+
+//About Section
+.about__box {
+    position: relative;
+    transition: all .5s;
+
+   
+
+    &-row {
+        margin-bottom: 6rem;
+        display: flex;
+
+        @media only screen and (max-width: 130rem) {
+            margin: 0 6rem;
+            margin-bottom: 6rem;
+
+        }
+
+        @include respond(phone) {
+            flex-direction: column;
+            margin: 0 auto;
+            margin-bottom: 7rem;
+
+        }
+       
+    }
+
+    &-product {
+        text-align: center;
+        background-color: var(--color-grey-light);
+        transition: all .5s;
+
+        @include respond(phone) {
+            width: 63%;
+            text-align: left;
+        }
+
+    }
+
+    &-image {
+        height: 48.5rem;
+        width: 100%;
+        object-fit: cover;
+
+
+        @include respond(tab-land) {
+            height: 55rem;
+        }
+
+        @include respond(mid) {
+            height: 45rem;
+        }
+
+        @include respond(tab-port) {
+            height: 40rem;
+        }
+
+       
+    }
+
+    &-paragraph {
+        margin-bottom: 4rem;
+
+    }
+
+    &-desc {
+        padding: 10rem 2rem;
+        height: 48.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        text-align: center;
+        align-items: center;
+
+        @include respond(tab-land){
+            padding: 0;
+            height: 50rem;
+        }
+
+        @include respond(mid) {
+            height: 40rem;
+        }
+
+        @include respond(tab-port) {
+            height: 40rem;
+        }
+    }
+
+    &-caption--1 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -20%);
+        opacity: 0;
+        transition: all .5s;
+
+        
+    }
+
+    &-caption--2 {
+        position: absolute;
+        bottom: 5rem;
+        left: 5rem;
+        opacity: 0;
+        transition: all .5s;
+
+        
+    }
+
+    &-caption--3 {
+        position: absolute;
+        bottom: 5rem;
+        right: 5rem;
+        opacity: 0;
+        transition: all .5s;
+
+        
+    }
+
+    &-overlay {
+        background: rgba(0,0,0,0.6);
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        opacity: 0;
+        transition: all .3s;
+
+        @include respond(phone) {
+            display: none;
+        }
+    }
+
+    
+    &:hover &-overlay {
+        opacity: 1;
+    }
+
+    &:hover &-caption--1 {
+        opacity: 1;
+    }
+
+    &:hover &-caption--2 {
+        opacity: 1;
+    }
+
+    &:hover &-caption--3  {
+        opacity: 1;
+    }
+
+
+
+    //responsive 
+    &-1 {
+        @include respond(phone) {
+            order:1;
+
+        }
+    }
+    &-2 {
+
+        @include respond(phone) {
+            order:2;
+                        
+            
+            .about__box {
+                
+                &-product{
+                    margin-left: 18rem;
+                }
+
+                &-caption--1 {
+                    
+                        opacity: 1;
+                        color: #000;
+                        font-size: 3rem;
+                        top: 35%;
+                        left: 33%;
+                    
+                }
+
+                &-caption--2 {
+                    
+                        opacity: 1;
+                        color: #000;
+                        top: 23%;
+                        left: 0;
+                    
+                }
+
+                &-caption--3 {
+                    
+                        opacity: 1;
+                        color: #000;
+                        top: 67%;
+                        left: 0;
+                        font-size: 3.6rem;
+                    
+                }
+            }
+        }
+    }
+
+    &-4 {
+        @include respond(phone) {
+
+            .about__box {
+                    
+                    &-product{
+                        margin-left: 18rem;
+                    }
+    
+                    &-caption--1 {
+                        
+                            opacity: 1;
+                            color: #000;
+                            font-size: 3rem;
+                            top: 35%;
+                            left: 33%;
+                        
+                    }
+    
+                    &-caption--2 {
+                        
+                            opacity: 1;
+                            color: #000;
+                            top: 23%;
+                            left: 0;
+                        
+                    }
+    
+                    &-caption--3 {
+                        
+                            opacity: 1;
+                            color: #000;
+                            top: 67%;
+                            left: 0;
+                            font-size: 3.6rem;
+                        
+                    }
+                }
+        }
+    }
+
+    
+    &-3 {
+        @include respond(phone) {
+            order:3;
+            
+            .about__box {
+                &-product{
+                    margin-left: -2rem;
+                }
+
+                &-caption--1 {                    
+                        opacity: 1;
+                        color: #000;
+                        font-size: 3rem;
+                        top: 35%;
+                        left: 87%;
+                        text-align: right;
+                }
+
+                &-caption--2 {
+                    
+                        opacity: 1;
+                        color: #000;
+                        top: 23%;
+                        left: 91%;
+                    
+                }
+
+                &-caption--3 {
+                    
+                        opacity: 1;
+                        color: #000;
+                        top: 67%;
+                        left: 80%;
+                        font-size: 3.6rem;
+                    
+                }
+            }
+        }
+    }
+
+    &-5, &-6 {
+        @include respond(phone) {
+            display: none;
+        }
+    }
+
+
+    
+}
+
+//Responsive Button
+.btn__about-1,
+.btn__about-2 {
+    display: none !important;
+}
+
+@include respond(phone) {
+    .btn__about {
+    
+        &-1 {
+            display: block !important;
+            position: absolute;
+            left: 0;
+            bottom: 5%;
+            padding: 1.5rem 5rem !important;
+            font-size: 1.6rem !important;
+        }
+
+        &-2 {
+            display: block !important;
+            position: absolute;
+            right: -5%;
+            bottom: 5%;
+            padding: 1.5rem 5rem !important;
+            font-size: 1.6rem !important;
+        }
+    }
+}
+
+
+.section-about {
+    margin-bottom: 8rem;
+}
+
+//About section Ends
+
+//Featured Section Starts
+.section-featured {
+    position: relative;
+    margin-bottom: 8rem;
+}
+
+//Featured Section Ends
+
+
+//Recipe Section Starts
+.section-recipe {
+    margin-bottom: 10rem;
+}
+
+//Recipe Section Ends

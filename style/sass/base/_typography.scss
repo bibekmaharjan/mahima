@@ -1,0 +1,116 @@
+@font-face {
+    font-family: 'sofiaProLight';
+    src: url('../../../assets/font/SofiaProLight.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'sofiaProMedium';
+    src: url('../../../assets/font/SofiaProMedium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'sofiaProSemiBold';
+    src: url('../../../assets/font/SofiaProSemiBold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'sofiaProBold';
+    src: url('../../../assets/font/SofiaProBold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'aakriti';
+    src: url('../../../assets/font/AakritiRegular.ttf') format('truetype');
+    font-weight: normal;
+}
+
+
+body {
+    font-family: sofiaPro, sans-serif;
+}
+
+.heading-primary {
+    color: var(--color-black);
+    font-size: 5.5rem;
+    font-family: 'sofiaProBold';
+    line-height: 6rem;
+}       
+
+.heading-secondary {
+    color: var(--color-grey-dark-2); 
+    font-size: 2.4rem;
+    font-family: 'sofiaProSemiBold';
+    line-height: 3rem;
+}
+
+.heading-product {
+    color: #fff; 
+    font-size: 2rem;
+    font-family: 'sofiaProSemiBold';
+    line-height: 3rem;
+
+    @include respond(phone) {
+        line-height: 3.5rem;
+    }
+}
+
+.heading-recipe {
+    color: var(--color-grey-dark-2); 
+    font-size: 2.6rem;
+    font-family: 'sofiaProBold';
+    line-height: 2.6rem;
+    margin-bottom: 3rem;
+}
+
+.desc-product {
+    color: #fff; 
+    font-size: 1.4rem;
+    font-family: 'sofiaProLight';
+    line-height: 2.5rem;
+}
+
+.heading-tertiary {
+    color: var(--color-black);
+    font-size: 2rem;
+    font-family: 'sofiaProLight';
+    line-height: 2.5rem;
+}
+
+.heading-header {
+    color: var(--color-black);
+    font-size: 3.6rem;
+    font-family: 'sofiaProLight';
+    line-height: 6.5rem;
+
+    @include respond(phone) {
+        font-size: 3rem;
+        line-height: 4.2rem;
+        text-align: center;
+    }
+}
+
+.heading-nepali {
+    font-family: aakriti;
+    font-size: 8.5rem;
+    font-weight: normal;
+    margin-bottom: 6rem;
+}
+
+.paragraph {
+    color: var(--color-grey-dark-2); 
+    font-size: 1.4rem;
+    font-weight: light;
+    font-family: 'sofiaProLight';
+
+
+    &-recipe {
+        line-height: 2.6rem;
+        margin-bottom: 2.6rem;
+    }
+    
+    &-copy {
+        font-size: 1rem;
+        line-height: 2.6rem;
+        color: #74746F;
+    }
+}

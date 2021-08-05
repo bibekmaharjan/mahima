@@ -1,0 +1,56 @@
+.product__slider{
+    position: relative;
+    z-index: 10;
+    text-align: center;
+
+    &-image {
+        height: 20rem;
+    }
+            &-imageBox {
+                transition: all .5s;
+                cursor: pointer;
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+    
+            }
+}
+
+
+.arrow_prev {
+    cursor: pointer;
+    position: absolute;
+    top: 10rem;
+    left: 8.8rem;
+    transition: all .5s;
+    &:hover {
+        margin-left: -1rem;
+    }
+
+    @include respond(tab-land){
+        left: 2rem;
+    }
+
+    & img {
+        width: 3.5rem;
+    }
+}
+
+.arrow_next {
+    cursor: pointer;
+    position: absolute;
+    top: 10rem;
+    right: 8.8rem;
+    transition: all .5s;
+    &:hover {
+        margin-right: -1rem;
+    }
+    @include respond(tab-land){
+        right: 2rem;
+    }
+
+    & img {
+        width: 3.5rem;
+    }
+}

@@ -1,0 +1,116 @@
+.featured {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 52rem;
+
+    &__bg {
+        width: 70%;
+        height: 100%;
+        &-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: .4;
+        }
+
+        @include respond(phone) {
+            width: 100%;
+            height: 50%;
+        }
+    }
+
+    //responsive rows starts
+    @include respond(phone) {
+        &__row {
+            margin: 0 !important;
+            padding: 0 !important;
+            max-width: 100% !important;
+        }
+    }
+    //responsive row ends
+
+    &__heading {
+        text-align: right;
+        position: absolute;
+        top: 5%;
+        right: 20%;
+
+        @include respond(phone) {
+            left: 10%;
+            top: 45%;
+        }
+
+        &-text {
+            display: flex;
+            flex-direction: column;
+
+            @include respond(phone) {
+                font-size: 6rem;
+                line-height: 6rem;
+                text-align: left;
+            }
+        }
+    }
+
+    &__paragraph {
+        position: absolute;
+        text-align: left;
+        top: 38%;
+        right: 0;
+        width: 51rem;
+
+        @include respond(phone) {
+            bottom: 18%;
+            left: 10%;
+        }
+    }
+
+    &__btn {
+        position: absolute;
+        bottom: 32%;
+        right: 26.5%;
+
+        @include respond(phone) {
+            right: 50%;
+            transform: translateX(50%);
+            bottom: 2rem;
+        }
+    }
+}
+
+.arrow_prev-2 {
+    cursor: pointer;
+    position: absolute;
+    bottom: 4rem;
+    left: 10rem;
+    transition: all .5s;
+    &:hover {
+        margin-left: -1rem;
+    }
+    @include respond(phone) {
+        left: 10%;
+    }
+
+    & img {
+        width: 6rem;
+    }
+}
+
+.arrow_next-2 {
+    cursor: pointer;
+    position: absolute;
+    bottom: 4rem;
+    right: 10rem;
+    transition: all .5s;
+    &:hover {
+        margin-right: -1rem;
+    }
+    @include respond(phone) {
+        right: 10%;
+    }
+
+    & img {
+        width: 6rem;
+    }
+}
